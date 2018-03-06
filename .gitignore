@@ -1,0 +1,7 @@
+*.swp
+package-lock.json
+db.dev.sqlite
+
+node_modules/
+public-doc/
+src/config/db/firebase/
