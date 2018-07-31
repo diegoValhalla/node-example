@@ -3,7 +3,7 @@ const config = require('../config');
 
 const log = bunyan.createLogger({
   name: 'example',
-  level: config.get('NODE_ENV') !== 'test' ? 'info' : 'fatal',
+  level: config.get('NODE_ENV') !== 'test' ? 'debug' : 'fatal',
   serializers: {
     req: req => ({
       method: req.method,
