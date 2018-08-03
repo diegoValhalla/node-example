@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.local
+    ports:
+      - 3001:3001
+    environment:
+      - NODE_ENV=local
+    volumes:
+      - .:/usr/src/app
+
+  swagger-editor:
+    image: 'swaggerapi/swagger-editor'
+    ports:
+      - 3001:8080
+
+  swagger-ui:
+    image: 'swaggerapi/swagger-ui'
+    ports:
+      - 3002:8080
+    volumes:
+      - ./accounts.yml:/app/swagger.yml
+    environment:
+      - SWAGGER_JSON=/app/swagger.yml
