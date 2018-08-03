@@ -1,7 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const getMiddlewares = () => {
+/**
+ * Export all files as an object: { <filename>: <file module.exports> }
+ */
+const getAllExports = () => {
   const middlewares = fs
     .readdirSync(__dirname)
     .reduce((obj, folderName) => {
@@ -18,4 +21,4 @@ const getMiddlewares = () => {
   return middlewares;
 };
 
-module.exports = getMiddlewares();
+module.exports = getAllExports();

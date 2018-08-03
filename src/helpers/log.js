@@ -1,3 +1,7 @@
+/**
+ * Log class to define common setup.
+ */
+
 const bunyan = require('bunyan');
 const config = require('../config');
 

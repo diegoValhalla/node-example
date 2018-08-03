@@ -1,3 +1,8 @@
+/**
+ * Export all files as an object:
+ *  { 'api/<version>/<resource>': <resource module.exports> }
+ */
+
 const fs = require('fs');
 const path = require('path');
 

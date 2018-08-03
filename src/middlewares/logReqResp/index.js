@@ -1,6 +1,11 @@
 const uuid = require('uuid/v1');
 const log = require('../../helpers/log');
 
+/**
+ * Middleware to log every time a request is made to the server and its
+ * response.
+ * @returns {function} middleware.
+ */
 module.exports = () => (req, res, next) => {
   const reqId = uuid();
 
